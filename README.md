@@ -36,4 +36,25 @@
                 - pages like e.g.1 & files like e.g.2
 - {{ }} and {% %} are very useful
 
+## Deploying to Heroku
+- reason we use Heroku is because although we can push to gitHub, we can't deploy our site to github pages because it doesn't work with python
+- npm install -g heroku : installs heroku (-g is needed in order to install heroku system wide)
+- heroku login -i : login in to heroku in terminal
+- heroku apps : shows list of all created apps on heroku
+    - to rename app: heroku apps:rename old-name --app new-name
+### Pushing directly to heroku from CLI
+- to push to Heroku we need to:
+    - create new app on heroku
+    - connect GIT remote to Heroku
+    - create requirements.txt with all dependancies
+    - create a Heroku proCfile
+#### Connect git remote to Heroku
+- go to heroku apps settings and copy "Heroku GIT url"
+- git remote add heroku(this is just a name?) and paste copied link
+- git remote -v : you can see remote repos (heroku and github)
+- before pushing the project we need to create requirements.txt otherwise push will fail
+#### Creating requirements.txt
+- pip3 freeze --local > requirements.txt : will create txt file with all dependancies listed inside
+#### Pushing to Heroku
+- git push -u heroku master
 
