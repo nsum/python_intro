@@ -34,5 +34,6 @@
             - "{{ url_for ('index') }}" - where index is the name of the function in run.py
             - all our internal links need to be formatted in above way
                 - pages like e.g.1 & files like e.g.2
+- {{ }} and {% %} are very useful
 
 
