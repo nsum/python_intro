@@ -53,10 +53,12 @@
 - git remote add heroku(this is just a name?) and paste copied link
 - git remote -v : you can see remote repos (heroku and github)
 - before pushing the project we need to create requirements.txt otherwise push will fail
+- git remote rm heroku will remove heroku git if we need to remove it
 #### Creating requirements.txt
 - pip3 freeze --local > requirements.txt : will create txt file with all dependancies listed inside
 #### Pushing to Heroku
-- git push -u heroku master (just first push?)
+- git push -u heroku master (just first push?) 
+- git push origin master is used to push to github
 #### Creating proCfile
 - procfile tells heroku how to run our project
 - echo web: python run.py > Procfile
@@ -64,3 +66,9 @@
 - it basically says it's gonna be web project and the command to run it is python run.py
 - git add / commit / push (you can use just push without -u heroku master...)
 
+## Heroku
+- heroku logs --tail --app app-name :shows app logs, this is where our errors will shows
+- it's also available in heroku site under more-view logs
+    - e.g error because secret key in form submit is gitignored and heroku doesn't have it
+- to add any hidden environ variables go to heroku settings - reveal config variables
+    - for our current app vars we need to add are (IP,PORT and ref env.py for third one)
