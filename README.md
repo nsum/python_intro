@@ -56,5 +56,11 @@
 #### Creating requirements.txt
 - pip3 freeze --local > requirements.txt : will create txt file with all dependancies listed inside
 #### Pushing to Heroku
-- git push -u heroku master
+- git push -u heroku master (just first push?)
+#### Creating proCfile
+- procfile tells heroku how to run our project
+- echo web: python run.py > Procfile
+    - echo creates a file
+- it basically says it's gonna be web project and the command to run it is python run.py
+- git add / commit / push (you can use just push without -u heroku master...)
 
